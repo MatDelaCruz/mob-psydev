@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Mob PsyDev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #0f172a;
+            color: #caff2c;
+            text-align: center;
+            padding-top: 80px;
+        }
+        /* Header Animation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 10%;
+            background: #1e293b;
+            align-items: center;
+            z-index: 1000;
+            transform: translateY(-100%);
+            animation: slideDown 0.8s ease-out forwards;
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #caff2c;
+            text-decoration: none;
+        }
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #caff2c;
+        }
+        .container {
+            margin-top: 50px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+        }
+        .subtitle {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #e2e8f0;
+        }
+        .about-content {
+            margin: 50px auto;
+            text-align: center;
+            max-width: 800px;
+            line-height: 1.8;
+        }
+        /* Button Styling */
+        .btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            background: #334155;
+            color: #caff2c;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+        .btn:hover {
+            background: #475569;
+            transform: scale(1.05);
+        }
+        /* Footer */
+        footer {
+            padding: 30px;
+            background: #1e293b;
+            font-size: 18px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards 0.8s;
+        }
+        /* Keyframe Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 5%;
+            }
+            .logo {
+                font-size: 20px;
+            }
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+            nav a {
+                margin-left: 0;
+                margin-top: 10px;
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .container {
+                margin-top: 80px;
+                padding: 0 10%;
+            }
+
+            .about-content {
+                width: 100%;
+                padding: 10px;
+                margin-top: 20px;
+            }
+
+            .btn {
+                width: 100%;
+                font-size: 16px;
+            }
+
+            footer {
+                font-size: 16px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <img src="images/company/Icon.png" alt="Icon Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+            <a href="index.html" class="logo">Mob PsyDev</a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="about-content">
+            <h1>About Mob PsyDev</h1>
+            <p class="subtitle">Passionate About Building Efficient & Secure Solutions</p>
+            <p>We are a dynamic team of developers and security professionals dedicated to delivering cutting-edge solutions for businesses. Our team is committed to building secure, scalable, and high-performing applications, all while focusing on delivering an exceptional user experience.</p>
+            <p>With years of experience in the industry, we embrace challenges and transform ideas into secure digital solutions. At Mob PsyDev, we believe in PRECISION, CREATIVITY, and RELIABILITY, ensuring that every project exceeds client expectations.</p>
+            <button class="btn">Let's Build Something Amazing Together</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mob PsyDev</p>
+    </footer>
+</body>
+</html>

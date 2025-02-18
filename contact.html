@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mob PsyDev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #0f172a;
+            color: #caff2c;
+            text-align: center;
+            padding-top: 80px;
+        }
+        /* Header Animation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 10%;
+            background: #1e293b;
+            align-items: center;
+            z-index: 1000;
+            transform: translateY(-100%);
+            animation: slideDown 0.8s ease-out forwards;
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #caff2c;
+            text-decoration: none;
+        }
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #caff2c;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-top: 80px;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards 0.3s;
+        }
+        .contact-info {
+            margin-top: 30px;
+            text-align: left;
+            width: 90%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards 0.6s;
+        }
+        table {
+            width: 100%;
+            margin-top: 10px;
+            border-collapse: collapse;
+            text-align: left;
+            border-radius: 0px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 15px;
+            border: 1px solid #caff2c;
+            color: #caff2c;
+            transition: background 0.3s ease-in-out;
+        }
+        th {
+            background-color: #334155;
+        }
+        td {
+            background-color: #1e293b;
+        }
+        td:hover {
+            background: #475569;
+        }
+        .icon {
+            margin-right: 10px;
+            color: #caff2c;
+        }
+        a {
+            color: #caff2c;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+        a:hover {
+            color: #e2e8f0;
+        }
+        /* Footer */
+        footer {
+            padding: 30px;
+            background: #1e293b;
+            margin-top: 40px;
+            font-size: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards 1s;
+        }
+        /* Keyframe Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 5%;
+            }
+            .logo {
+                font-size: 20px;
+            }
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+            nav a {
+                margin-left: 0;
+                margin-top: 10px;
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .contact-info {
+                width: 90%;
+            }
+
+            table {
+                width: 100%;
+                margin-top: 10px;
+            }
+            th, td {
+                font-size: 14px;
+                padding: 10px;
+            }
+            footer {
+                font-size: 16px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <img src="images/company/Icon.png" alt="Icon Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+            <a href="index.html" class="logo">Mob PsyDev</a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <h1>Contact</h1>
+    
+    <div class="contact-info">
+        <table>
+            <thead>
+                <tr>
+                    <th>Contact Method</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="fa-solid fa-envelope icon"></i>Email</td>
+                    <td>mathewdelacruz650@gmail.com</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-phone icon"></i>Phone</td>
+                    <td>0945 319 2549</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-location-dot icon"></i>Location</td>
+                    <td>NCR, Philippines</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-brands fa-facebook icon"></i>Facebook</td>
+                    <td><a href="https://www.facebook.com/profile.php?id=61560132671545" target="_blank">Visit our Facebook Page</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mob PsyDev</p>
+    </footer>
+
+</body>
+</html>

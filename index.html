@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mob PsyDev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #0f172a;
+            color: #caff2c;
+            text-align: center;
+            padding-top: 80px;
+        }
+        /* Header Animation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 10%;
+            background: #1e293b;
+            align-items: center;
+            z-index: 1000;
+            transform: translateY(-100%);
+            animation: slideDown 0.8s ease-out forwards;
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #caff2c;
+            text-decoration: none;
+        }
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #caff2c;
+        }
+        .container {
+            margin-top: 3%;
+        }
+        /* Hero Section Animations */
+        .dplogo {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 5%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 10px;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeInUp 1s ease-in-out forwards 0.3s;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards 0.6s;
+        }
+        .subtitle {
+            font-size: 24px;
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards 0.9s;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            background: #334155;
+            color: #caff2c;
+            transition: transform 0.3s ease, background 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards 1.2s;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            background: #475569;
+        }
+        /* Cards Animations */
+        .team {
+            margin: 80px auto;
+            text-align: center;
+        }
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            margin: 10px;
+            display: inline-block;
+            width: 250px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: scale(0.9);
+            animation: fadeInUp 0.8s ease-in-out forwards;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(202, 255, 44, 0.3);
+        }
+        .profile {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 10px;
+        }
+        /* Skills Toggle Animation */
+        .skills {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            background: #334155;
+            padding: 0;
+            margin-top: 10px;
+            border-radius: 8px;
+            transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+        }
+        .skills.active {
+            opacity: 1;
+            max-height: 100px;
+            padding: 10px;
+        }
+        /* Footer */
+        footer {
+            padding: 20px;
+            background: #1e293b;
+        }
+        /* Keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            /* Adjust the layout of the logo and navigation */
+            header {
+                padding: 20px 5%;
+            }
+            .logo {
+                font-size: 20px;
+            }
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+            nav a {
+                margin-left: 0;
+                margin-top: 10px;
+                font-size: 16px;
+            }
+
+            /* Adjust the size of the hero logo and text */
+            .dplogo {
+                width: 80%;
+                height: auto;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            .subtitle {
+                font-size: 18px;
+            }
+            .btn {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+
+            /* Stack the cards on mobile */
+            .team {
+                margin: 40px auto;
+            }
+            .card {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+    <script>
+        function toggleSkills(id) {
+            var skills = document.getElementById(id);
+            skills.classList.toggle("active");
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <img src="images/company/Icon.png" alt="Icon Logo" style="width: 30px; height: 30px; margin-right: 10px;">
+            <a href="index.html" class="logo">Mob PsyDev</a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+    <div class="container" id="about">
+        <div class="logo-container">
+            <img src="images/company/Logo.png" alt="Mob PsyDev Logo" class="dplogo">
+        </div>
+        <h1>Mob PsyDev</h1>
+        <p class="subtitle">We build beautiful, efficient, and secure applications.</p>
+        <button class="btn">Avail our Extraordinary Service for your Extraordinary Business Outcome!</button>
+    </div>
+    
+    <section class="team" id="developers">
+        <h2>Developers Team</h2>
+        <div class="card" onclick="toggleSkills('dev1-skills')">
+            <img src="images/team/mat.jpg" alt="Developer 1" class="profile">
+            Mathew Dela Cruz
+            <div id="dev1-skills" class="skills">IT | LPU Fr. Microsoft VP | Project Manager</div>
+        </div>
+        <div class="card" onclick="toggleSkills('dev2-skills')">
+            <img src="images/team/glenn.jpg" alt="Developer 2" class="profile">
+            Glenn Cavita
+            <div id="dev2-skills" class="skills">IT | Sr. Full Stack Developer | Developer</div>
+        </div>
+        <div class="card" onclick="toggleSkills('dev3-skills')">
+            <img src="images/team/mark.jpg" alt="Developer 3" class="profile">
+            Raymark Cruz 
+            <div id="dev3-skills" class="skills">IT | Web & App Developer | Developer</div>
+        </div>
+        <div class="card" onclick="toggleSkills('dev4-skills')">
+            <img src="images/team/daniel.jpg" alt="Developer 4" class="profile">
+            Daniel Bautista
+            <div id="dev4-skills" class="skills">IT | Software Engineer | Developer</div>
+        </div>
+    </section>
+
+    <section class="team" id="security">
+        <h2>Security Team</h2>
+        <div class="card" onclick="toggleSkills('sec1-skills')">
+            <img src="images/team/martin.jpg" alt="Security Member 1" class="profile">
+            Martin Esbieto
+            <div id="sec1-skills" class="skills">IT | Cybersecurity | Ethical Hacker</div>
+        </div>
+        <div class="card" onclick="toggleSkills('sec2-skills')">
+            <img src="images/team/leonel.jpg" alt="Security Member 2" class="profile">
+            Leonel Obina
+            <div id="sec2-skills" class="skills">IT | Cybersecurity | Ethical Hacker</div>
+        </div>
+        <div class="card" onclick="toggleSkills('sec3-skills')">
+            <img src="images/team/lux.jpg" alt="Security Member 3" class="profile">
+            Luxiel Angelo
+            <div id="sec3-skills" class="skills">IT | Cybersecurity | Ethical Hacker</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Mob PsyDev</p>
+    </footer>
+</body>
+</html>
